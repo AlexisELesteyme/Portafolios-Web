@@ -5,7 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Permitir peticiones de diferentes dominios
 app.use(cors());
@@ -52,5 +52,5 @@ app.get("/", (req, res) => {
 
 // Iniciar el servidor y verificar que está corriendo
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
