@@ -42,7 +42,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     });
 
     try {
-        const response = await fetch("https://alexis-portafolios-web.onrender.com", {
+        const response = await fetch("https://alexis-portafolios-web.onrender.com/send", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)

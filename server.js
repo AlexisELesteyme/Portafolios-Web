@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors({
+    origin: "https://alexis-web-portafolio.netlify.app/"
+}));
 
 // Verificar que las variables de entorno se están cargando
 console.log("Email User:", process.env.EMAIL_USER);
