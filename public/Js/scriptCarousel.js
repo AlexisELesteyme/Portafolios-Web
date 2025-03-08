@@ -5,9 +5,9 @@ const proyectos = [
         titulo: "Subastas M.E.W",
         descripcion: "Subastas M.E.W es un sistema integral de subastas disponible en plataformas web, móviles y de escritorio, diseñado para facilitar la gestión y participación en subastas en línea. Desarrollado con HTML, CSS, JavaScript, C#, MySQL y ASP.NET, permite a los usuarios crear, administrar y ofertar en subastas de manera eficiente. Ofrece una interfaz intuitiva, gestión de usuarios, visualización de productos y un sistema seguro de pujas, brindando una experiencia fluida y confiable tanto para compradores como para vendedores.",
         imagenes: [
-            "/sources/imgs/Proximas.webp",
-            "/sources/imgs/MiProducto.webp",
-            "/sources/imgs/login.webp"
+            "/public/imgs/Proximas.webp",
+            "/public/imgs/MiProducto.webp",
+            "/public/imgs/login.webp"
         ],
         tools: ["HTML", "CSS", "JavaScript", "C#", "MySQL", "ASP.NET", "React Native"]
     },
@@ -16,9 +16,9 @@ const proyectos = [
         titulo: "Eventos YA!",
         descripcion: "Este sistema de gestión de eventos, desarrollado en Laravel y MySQL, permite a los usuarios crear, administrar y visualizar eventos de manera eficiente. Utiliza un template predefinido para el frontend, ofreciendo una interfaz moderna y funcional. Incluye funcionalidades como la gestión de fechas, descripciones, colores personalizados, e invitaciones a otros usuarios y la opción de definir eventos de día completo, brindando una experiencia intuitiva y organizada.",
         imagenes: [
-            "/sources/imgs/inicioEvento.webp",
-            "/sources/imgs/CrearEvento.webp",
-            "/sources/imgs/eventoPublico.webp"
+            "/public/imgs/inicioEvento.webp",
+            "/public/imgs/CrearEvento.webp",
+            "/public/imgs/eventoPublico.webp"
         ],
         tools: ["HTML", "CSS", "Laravel 11", "PHP", "MySQL"]
     }
