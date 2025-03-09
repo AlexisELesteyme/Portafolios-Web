@@ -45,8 +45,14 @@ document.getElementById("contactForm").addEventListener("submit", async function
         const response = await fetch("https://alexis-portafolios-web.onrender.com/send", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData)
-        });
+            body: JSON.stringify({
+                name: "Alexis",
+                apellido: "Test",
+                email: "test@example.com",
+                numero: "123456789",
+                mensaje: "Esto es un test"
+            })
+        }).then(res => res.json()).then(console.log).catch(console.error);
 
         const data = await response.json();
 

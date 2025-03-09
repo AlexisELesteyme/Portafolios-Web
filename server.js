@@ -8,11 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Permitir peticiones de diferentes dominios
-app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-    origin: "https://alexis-web-portafolio.netlify.app/"
+    origin: "https://alexis-web-portafolio.netlify.app",
+    methods: "POST, GET",
+    allowedHeaders: "Content-Type"
 }));
 
 // Verificar que las variables de entorno se están cargando
