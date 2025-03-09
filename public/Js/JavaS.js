@@ -42,17 +42,40 @@ document.getElementById("contactForm").addEventListener("submit", async function
     });
 
     try {
-        const response = await fetch("https://alexis-portafolios-web.onrender.com/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                name: "Alexis",
-                apellido: "Test",
-                email: "test@example.com",
-                numero: "123456789",
-                mensaje: "Esto es un test"
-            })
-        }).then(res => res.json()).then(console.log).catch(console.error);
+        const response = await try {
+            const response = await fetch("https://alexis-portafolios-web.onrender.com/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+        
+            const data = await response.json();
+        
+            if (response.ok) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Mensaje enviado",
+                    text: "Tu mensaje fue enviado correctamente",
+                    timer: 3000,
+                    showConfirmButton: false
+                });
+                document.getElementById("contactForm").reset();
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: data.message || "Hubo un problema al enviar el mensaje"
+                });
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Hubo un problema al enviar el mensaje. Inténtalo de nuevo."
+            });
+        }
+        
 
         const data = await response.json();
 
